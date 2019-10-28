@@ -143,7 +143,7 @@ Private Function TryPattern(iRowIdx As Integer) As Boolean
         '順列パターンの仮配置
         If PlaceLine(iRowIdx, pNo) Then
             '検証
-            If pInnerObj.IsCorrect(iRowIdx, pNo) Then
+            If pInnerObj.IsCorrect(iRowIdx, pNo) And iRowIdx = 9 Then
                 '9行目で検証ＯＫなら完成。
                 If iRowIdx >= 9 Then
                     TryPattern = True
